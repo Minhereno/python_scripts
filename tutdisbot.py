@@ -3,9 +3,6 @@ import numpy as np
 from discord.ext import commands
 
 
-client.run("NzEyODk3NDc4MDY4MDExMDI4.XsadwA.OZXngU6x8-PXOcLLFZW0hVklOoE")
-
-
 client = commands.Bot(command_prefix = "!")
 
 @client.event
