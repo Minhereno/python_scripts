@@ -9,7 +9,7 @@ Hi, I'm Minh! I'm a recent biology graduate with a concentration in bioinformati
 
 ## References
 
-[LinkedIn](linkedin.com/in/minh-tran-a5206616a)
+[LinkedIn](https://www.linkedin.com/in/minh-tran-a5206616a/)
 
 [Resume](https://1drv.ms/w/s!AuhXbP8CWYaOgnFcuYg3f0B0bBnU?e=N0lTds)
 
