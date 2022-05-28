@@ -24,7 +24,7 @@ Hi, I'm Minh! I'm a recent biology graduate with a concentration in bioinformati
 |MinhTran_CoronaVirus|Analysis and translation of SARS-CoV-2 genetic sequence|
 |MinhTran_choufasmanassignment|Chou Fasman algorithm for predicting secondary structures of proteins|
 |MonteHallProblem|Monty Hall probablity|
-|SARS_CoV_2_Testing|Analysis of SARS-CoV-2 testing metrics|\
+|SARS_CoV_2_Testing|Analysis of SARS-CoV-2 testing metrics with pandas and plotly|\
 |Scikit|Machine learning with Scikit and Tensorflow|
 |bs_sample|Scrape SARS-CoV-2 cases metrics using BeautifulSoup|
 |sel|Automate web browser to get assembly references of organisms using selenium|
