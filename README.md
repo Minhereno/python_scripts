@@ -11,7 +11,7 @@
 ---
 ## Description of files
 
-| File      | Description |
+| File Name      | Description |
 | ----------- | ----------- |
 | Homework 6 |Plotting with numpy and matplotlib|
 | Homework 7 | Monty Hall, random chance, and confidence intervals       |
