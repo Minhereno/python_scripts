@@ -18,7 +18,7 @@
 |MinhTranFINAL|Differential equations with Scipy|
 |MinhTran_CoronaVirus|Analysis and translation of SARS-CoV-2 genetic sequence|
 |MinhTran_choufasmanassignment|Chou Fasman algorithm for predicting secondary structures of proteins|
-|MonteHallProblem|Monty Hall probablity|
+|MonteHallProblem|Monty Hall probability|
 |SARS_CoV_2_Testing|Analysis of SARS-CoV-2 testing metrics with pandas and plotly|\
 |Scikit|Machine learning with Scikit and Tensorflow|
 |bs_sample|Scrape SARS-CoV-2 cases metrics using BeautifulSoup|
