@@ -22,5 +22,5 @@
 |SARS_CoV_2_Testing|Analysis of SARS-CoV-2 testing metrics with pandas and plotly|\
 |Scikit|Machine learning with Scikit and Tensorflow|
 |bs_sample|Scrape SARS-CoV-2 cases metrics using BeautifulSoup|
-|sel|Automate web browser to get assembly references of organisms NCBI assembly database using selenium|
+|sel|Automate web browser to get assembly references of organisms from NCBI assembly database using selenium|
 |tutdisbot|Discord bot|
