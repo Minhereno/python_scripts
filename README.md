@@ -1,11 +1,4 @@
 # Minh Tran - Python Projects 
-
----
-
-## References
-
-- [LinkedIn](https://www.linkedin.com/in/minh-tran-a5206616a/)
-
 ---
 ## Description of files
 
