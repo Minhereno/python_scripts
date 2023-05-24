@@ -15,3 +15,4 @@
 |bs_sample.py|Scrape SARS-CoV-2 cases metrics using BeautifulSoup|
 |sel.py|Automate web browser to get assembly references of organisms from NCBI assembly database using selenium|
 |tutdisbot.py |Discord bot|
+|streamlit_iris.py|Streamlit interactive web page for Covid analysis|
