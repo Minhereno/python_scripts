@@ -1,11 +1,12 @@
-# Minh Tran - Python Projects 
+# Minh Tran - Python Scripts 
+
+The following are different scripts analyzing different subject matters 
+
 ---
 ## Description of files
 
 | File Name      | Description |
 | ----------- | ----------- |
-| Homework 6.ipynb |Plotting with numpy and matplotlib|
-| Homework 7.ipynb | Monty Hall, random chance, and confidence intervals       |
 |MinhTranFINAL.ipynb|Differential equations with Scipy|
 |MinhTran_CoronaVirus.py|Analysis and translation of SARS-CoV-2 genetic sequence|
 |MinhTran_choufasmanassignment.py|Chou Fasman algorithm for predicting secondary structures of proteins|
