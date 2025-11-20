@@ -9,6 +9,14 @@ st.set_page_config(page_title="Minh Tran's Portfolio", layout="wide", page_icon=
 
 def show_home():
     st.title("Minh Tran's Portfolio")
+    st.image("streamlit_pfp/minh_tran_pfp.jpg, width=200")
+    st.markdown("""
+                    About me: A data analyst/data scientist open to positions to learn and utilize my knowledge and skills in exploratory data analysis, data
+                    manipulation, AI/ML, and data visualization to turn into actionable insights to benefit the public good (Python, R, Microsoft Excel, SQL,
+                    and Tableau). I have experience working in an AGILE environment in a federal contractor setting and worked with machine learning and
+                    real world statistical metadata such as image/document/videos/csv/xlsx formats as well as public health metadata and FASTA/FASTQ data
+                    formats.
+    """)
     st.markdown("Use the sidebar to navigate sections (Projects, Resume, Visualizations, About, Contact).")
 
 
