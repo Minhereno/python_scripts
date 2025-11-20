@@ -66,7 +66,7 @@ def show_visualizations():
             st.dataframe(df.head())
 
 def show_resume():
-    st.pdf("resume/MinhTran_Resume.pdf")
+    st.pdf("resume/MinhTran_Resume.pdf", height=800)
 
 def show_contact():
     st.header("Contact")
