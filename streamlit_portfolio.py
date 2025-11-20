@@ -5,24 +5,23 @@ import streamlit as st
 import plotly.express as px
 
 
-st.set_page_config(page_title="Portfolio", layout="wide", page_icon=":sparkles:")
+st.set_page_config(page_title="Minh Tran's Portfolio", layout="wide", page_icon=":sparkles:")
 
 def show_home():
-    st.title("Minh Tran - Portfolio")
-    st.markdown("Use the sidebar to navigate sections (Projects, Visualizations, About, Contact).")
+    st.title("Minh Tran's Portfolio")
+    st.markdown("Use the sidebar to navigate sections (Projects, Resume, Visualizations, About, Contact).")
 
 
 def show_projects():
     st.header("Projects & Code")
     base_dir = Path(__file__).resolve().parents[1]  # goes up from streamlit_sample to python_projects
-    st.write(f"Scanning `{base_dir}` for Python projects")
     if not base_dir.exists():
         st.error(f"Projects directory not found: {base_dir}")
         return
 
     files = sorted([p for p in base_dir.rglob("*.*") if p.suffix in (".py", ".md")])
     if not files:
-        st.info("No `.py` or `.ipynb` files found under the projects folder.")
+        st.info("No `.py` files found under the projects folder.")
         return
 
     for f in files:
@@ -43,7 +42,6 @@ def show_visualizations():
     st.header("CDC Covid Public Health Data Visualizations")
     csv_path = "CDC_public_health_data/VDH-COVID-19-PublicUseDataset-EventDate.csv"
     if csv_path:
-        st.success(f"Found CSV at `{csv_path}` — loading...")
         try:
             df = pd.read_csv(csv_path)
             if 'Event Date' in df.columns:
