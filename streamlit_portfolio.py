@@ -2,22 +2,11 @@ import os
 from pathlib import Path
 import pandas as pd
 import streamlit as st
+import base64
+import plotly.express as px
 
 
 st.set_page_config(page_title="Portfolio", layout="wide", page_icon=":sparkles:")
-
-
-def find_csv():
-    candidates = [
-        "/mnt/c/Users/Minh Tran/Documents/python_projects/streamlit_sample/VDH-COVID-19-PublicUseDataset-EventDate.csv",
-        r"C:\\Users\\Minh Tran\\Documents\\python_projects\\streamlit_sample\\VDH-COVID-19-PublicUseDataset-EventDate.csv",
-        str(Path(__file__).with_name("VDH-COVID-19-PublicUseDataset-EventDate.csv")),
-    ]
-    for p in candidates:
-        if os.path.exists(p):
-            return p
-    return None
-
 
 def show_home():
     st.title("Minh Tran - Portfolio")
@@ -53,7 +42,7 @@ def show_projects():
 
 def show_visualizations():
     st.header("CDC Covid Public Health Data Visualizations")
-    csv_path = find_csv()
+    csv_path = "CDC_public_health_data/VDH-COVID-19-PublicUseDataset-EventDate.csv"
     if csv_path:
         st.success(f"Found CSV at `{csv_path}` — loading...")
         try:
@@ -77,6 +66,16 @@ def show_visualizations():
             df = pd.read_csv(uploaded)
             st.dataframe(df.head())
 
+def show_resume():
+    with open("resume/MinhTran_Resume.pdf", "rb") as f:
+        pdf_bytes = f.read()
+
+    # Display PDF inline
+    base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800px"></iframe>'
+
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
 def show_contact():
     st.header("Contact")
     st.markdown("- Email: `minhtraann@yahoo.com`")
@@ -84,12 +83,12 @@ def show_contact():
     st.markdown("- GitHub: https://github.com/Minhereno")
     st.markdown("- LinkedIn: https://www.linkedin.com/in/minh-tran-a5206616a/")
 
-
-
 def main():
-    menu = st.sidebar.selectbox("Section", ["Home", "Projects", "CDC Covid Public Health Data Visualizations", "Contact"])
+    menu = st.sidebar.selectbox("Section", ["Home", "Resume", "Projects", "CDC Covid Public Health Data Visualizations", "Contact"])
     if menu == "Home":
         show_home()
+    elif menu == "Resume":
+        show_resume()
     elif menu == "Projects":
         show_projects()
     elif menu == "CDC Covid Public Health Data Visualizations":
