@@ -10,7 +10,7 @@ st.set_page_config(page_title="Minh Tran's Portfolio", layout="wide", page_icon=
 def show_home():
     st.title("Minh Tran's Portfolio")
     st.image("streamlit_pfp/minh_tran_pfp.jpg", width=200)
-    st.markdown(" # About Me")
+    st.markdown(" ### About Me")
     st.markdown(""" 
                     A data analyst/data scientist open to positions to learn and utilize my knowledge and skills in exploratory data analysis, data
                     manipulation, AI/ML, and data visualization to turn into actionable insights to benefit the public good (Python, R, Microsoft Excel, SQL,
