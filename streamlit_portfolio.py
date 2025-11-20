@@ -26,7 +26,6 @@ def show_projects():
 
     for f in files:
         with st.expander(f.name):
-            st.write(f"Path: `{f}`")
             try:
                 if f.suffix == ".py":
                     text = f.read_text(encoding="utf-8")
