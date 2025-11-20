@@ -45,16 +45,3 @@ async def FTPChamps(ctx):
     Champs = lol.get_champions(free_to_play=True)
     for Champ in Champs:
         await ctx.send(Champ['name'])
-
-
-
-
-
-
-
-
-
-
-
-
-

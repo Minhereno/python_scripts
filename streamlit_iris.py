@@ -1,3 +1,4 @@
+
 from email.policy import default
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -52,12 +53,3 @@ with tab3:
 
     #event date vs number of Hospitalizations
     st.plotly_chart(px.line(grouped_event_date_df, y = 'Number of Hospitalizations', title = 'Event Date vs. Number of Hospitalizations'))
-
-
-
-
-
-
-
-
-
