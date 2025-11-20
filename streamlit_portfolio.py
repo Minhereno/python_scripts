@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-import base64
 import plotly.express as px
 
 
@@ -67,14 +66,7 @@ def show_visualizations():
             st.dataframe(df.head())
 
 def show_resume():
-    with open("resume/MinhTran_Resume.pdf", "rb") as f:
-        pdf_bytes = f.read()
-
-    # Display PDF inline
-    base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800px"></iframe>'
-
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    st.pdf("resume/MinhTran_Resume.pdf")
 
 def show_contact():
     st.header("Contact")
