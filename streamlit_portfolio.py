@@ -62,7 +62,7 @@ def show_visualizations():
                     st.plotly_chart(px.line(grouped, y='Number of Deaths', title='Event Date vs. Number of Deaths in Virginia'))
 
             else:
-                continue
+                pass
         except Exception as e:
             st.error(f"Failed to load CSV: {e}")
     else:
