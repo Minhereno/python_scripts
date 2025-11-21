@@ -18,7 +18,7 @@ def show_home():
                     real world statistical metadata such as image/document/videos/csv/xlsx formats as well as public health metadata and FASTA/FASTQ data
                     formats.
     """)
-    st.markdown("Use the sidebar to navigate sections (Projects, Resume, Visualizations, About, Contact).")
+    st.markdown("*Use the sidebar to navigate sections (Projects, Resume, Visualizations, About, Contact).*")
 
 
 def show_projects():
@@ -47,7 +47,7 @@ def show_projects():
 
 
 def show_visualizations():
-    st.header("CDC Covid Public Health Data Visualizations")
+    st.header("CDC Covid Public Health Data in Virginia Counties")
     csv_path = "CDC_public_health_data/VDH-COVID-19-PublicUseDataset-EventDate.csv"
     if csv_path:
         try:
@@ -82,18 +82,18 @@ def show_contact():
     st.markdown("- LinkedIn: https://www.linkedin.com/in/minh-tran-a5206616a/")
 
 def main():
-    menu = st.sidebar.selectbox("Section", ["Home", "Resume", "Projects", "CDC Covid Public Health Data Visualizations", "Contact"])
-    if menu == "Home":
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "Resume", "Projects", "CDC Covid Public Health Data in Virginia Counties", "Contact"])
+    
+    with tab1:
         show_home()
-    elif menu == "Resume":
+    with tab2:
         show_resume()
-    elif menu == "Projects":
+    with tab3:
         show_projects()
-    elif menu == "CDC Covid Public Health Data Visualizations":
+    with tab4:
         show_visualizations()
-    elif menu == "Contact":
+    with tab5:
         show_contact()
-
 
 if __name__ == "__main__":
     main()
