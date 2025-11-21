@@ -53,7 +53,7 @@ def show_visualizations():
             if 'Event Date' in df.columns:
                 df['Event Date'] = pd.to_datetime(df['Event Date'], errors='coerce')
                 grouped = df.groupby(df['Event Date'].dt.date).sum(numeric_only=True)
-                st.dataframe(grouped.tail(10))
+                st.dataframe(grouped)
                 if 'Number of Cases' in grouped.columns:
                     st.plotly_chart(px.line(grouped, y='Number of Cases', title='Event Date vs. Number of Cases in Virginia'))
                 if 'Number of Hospitalizations' in grouped.columns:
@@ -62,7 +62,7 @@ def show_visualizations():
                     st.plotly_chart(px.line(grouped, y='Number of Deaths', title='Event Date vs. Number of Deaths in Virginia'))
 
             else:
-                st.dataframe(df.head())
+                continue
         except Exception as e:
             st.error(f"Failed to load CSV: {e}")
     else:
