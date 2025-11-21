@@ -78,6 +78,7 @@ def show_contact():
     st.markdown("- Phone Number: `703-626-8840`")
     st.markdown("- GitHub: https://github.com/Minhereno")
     st.markdown("- LinkedIn: https://www.linkedin.com/in/minh-tran-a5206616a/")
+    st.markdown("- Indeed: https://profile.indeed.com/p/minht-nrz5s89")
 
 def main():
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "Resume", "Projects", "CDC Covid Public Health Data in Virginia Counties", "Contact"])
