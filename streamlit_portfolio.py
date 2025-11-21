@@ -55,9 +55,12 @@ def show_visualizations():
                 grouped = df.groupby(df['Event Date'].dt.date).sum(numeric_only=True)
                 st.dataframe(grouped.tail(10))
                 if 'Number of Cases' in grouped.columns:
-                    st.plotly_chart(px.line(grouped, y='Number of Cases', title='Event Date vs. Number of Cases'))
+                    st.plotly_chart(px.line(grouped, y='Number of Cases', title='Event Date vs. Number of Cases in Virginia'))
+                if 'Number of Hospitalizations' in grouped.columns:
+                    st.plotly_chart(px.line(grouped, y='Number of Hospitalizations', title='Event Date vs. Number of Hospitalizations in Virginia'))
                 if 'Number of Deaths' in grouped.columns:
-                    st.plotly_chart(px.line(grouped, y='Number of Deaths', title='Event Date vs. Number of Deaths'))
+                    st.plotly_chart(px.line(grouped, y='Number of Deaths', title='Event Date vs. Number of Deaths in Virginia'))
+
             else:
                 st.dataframe(df.head())
         except Exception as e:
