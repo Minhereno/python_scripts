@@ -1,9 +1,7 @@
 # Minh Tran - Python Scripts 
 
-The following are different scripts analyzing different subject matters 
-
 ---
-## Description of files
+## Description of Files
 
 | File Name      | Description |
 | ----------- | ----------- |
