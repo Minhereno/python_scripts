@@ -18,8 +18,6 @@ def show_home():
                     real world statistical metadata such as image/document/videos/csv/xlsx formats as well as public health metadata and FASTA/FASTQ data
                     formats.
     """)
-    st.markdown("*Use the sidebar to navigate sections (Projects, Resume, Visualizations, About, Contact).*")
-
 
 def show_projects():
     st.header("Projects & Code")
