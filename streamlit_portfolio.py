@@ -26,12 +26,12 @@ def show_projects():
         st.error(f"Projects directory not found: {base_dir}")
         return
 
-    files = sorted([p for p in base_dir.rglob("*.*") if p.suffix in (".py", ".md")])
+    files = sorted([p for p in base_dir.rglob("*.*") if p.suffix in (".py")])
     if not files:
         st.info("No `.py` files found under the projects folder.")
         return
 
-    readme_path = "./README.md"
+    readme_path = os.path.abspath(os.path.join(base_dir, "README.md"))
     readme_text = readme_path.read_text(encoding="utf-8")
     st.markdown(readme_text)
 
