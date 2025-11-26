@@ -4,7 +4,6 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-
 st.set_page_config(page_title="Minh Tran's Portfolio", layout="wide", page_icon=":sparkles:")
 
 def show_home():
@@ -19,9 +18,11 @@ def show_home():
                     formats.
     """)
 
+# Displaying README.md and Python source files from the projects directory
 def show_projects():
     st.header("Projects & Code")
     # Start from this file's directory and look up for the nearest README.md
+    # Read and display README.md
     start_dir = Path(__file__).resolve().parent
     readme_path = None
     base_dir = start_dir
@@ -61,7 +62,7 @@ def show_projects():
             except Exception as e:
                 st.write("Could not read file:", e)
 
-
+# Visualizations for CDC Covid Public Health Data in Virginia Counties
 def show_visualizations():
     st.header("CDC Covid Public Health Data in Virginia Counties")
     csv_path = "CDC_public_health_data/VDH-COVID-19-PublicUseDataset-EventDate.csv"
