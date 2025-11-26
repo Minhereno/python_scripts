@@ -20,7 +20,7 @@ def show_home():
 
 # Displaying README.md and Python source files from the projects directory
 def show_projects():
-    st.header("Projects & Code")
+    
     # Start from this file's directory and look up for the nearest README.md
     # Read and display README.md
     start_dir = Path(__file__).resolve().parent
