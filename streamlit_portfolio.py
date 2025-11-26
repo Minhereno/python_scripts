@@ -32,14 +32,18 @@ def show_projects():
         return
 
     for f in files:
+        if f.suffix == ".md":
+            text = f.read_text(encoding="utf-8")
+            st.markdown(text)
+        else:
+            pass
+            
         with st.expander(f.name):
             try:
                 if f.suffix == ".py":
                     text = f.read_text(encoding="utf-8")
                     st.code(text, language="python")
-                elif f.suffix == ".md":
-                    text = f.read_text(encoding="utf-8")
-                    st.markdown(text)
+
             except Exception as e:
                 st.write("Could not read file:", e)
 
