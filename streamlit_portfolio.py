@@ -21,21 +21,29 @@ def show_home():
 
 def show_projects():
     st.header("Projects & Code")
-    base_dir = Path(__file__).resolve().parents[1]  # goes up from streamlit_sample to python_projects
+    # Start from this file's directory and look up for the nearest README.md
+    start_dir = Path(__file__).resolve().parent
+    readme_path = None
+    base_dir = start_dir
+    for p in [start_dir] + list(start_dir.parents):
+        candidate = p / "README.md"
+        if candidate.exists():
+            readme_path = candidate
+            base_dir = p
+            break
+
     if not base_dir.exists():
         st.error(f"Projects directory not found: {base_dir}")
         return
 
-    # Display README content at the top of the Projects tab (if present)
-    readme_path = base_dir / "README.md"
-    if readme_path.exists():
+    if readme_path:
         try:
             readme_content = readme_path.read_text(encoding="utf-8")
             st.markdown(readme_content)
         except Exception as e:
             st.warning(f"Could not read README.md: {e}")
     else:
-        st.warning("README.md not found in projects folder.")
+        st.warning("README.md not found.")
 
     # Collect only Python source files and skip common unwanted folders
     files = sorted([p for p in base_dir.rglob("*.py")])
