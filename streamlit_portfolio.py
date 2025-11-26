@@ -31,9 +31,7 @@ def show_projects():
         st.info("No `.py` files found under the projects folder.")
         return
 
-    readme_path = os.path.abspath(os.path.join(base_dir, "README.md"))
-    readme_text = readme_path.read_text(encoding="utf-8")
-    st.markdown(readme_text)
+    st.markdown(os.path.abspath(os.path.join(base_dir, "README.md")))
 
     for f in files:
         with st.expander(f.name):
